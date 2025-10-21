@@ -168,9 +168,6 @@ Welcome to the Documentation of the **automated Connect4 Game** using the fabulo
 
 ---
 
-### Gameflow Video
-*To be added.*
-
 ### Screenshots of Running Scripts
 
 **analyze_board.py in Action**
@@ -188,6 +185,7 @@ Welcome to the Documentation of the **automated Connect4 Game** using the fabulo
 **cleanup_board.py in Action**
     Screenshot of transforming the `cleanupBoard` into the `cleanUpArray` two times
     ![Cleanup_board.py in Action](cleanup_inAction.png)
+
 
 
 
