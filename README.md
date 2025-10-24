@@ -168,6 +168,33 @@ Welcome to the Documentation of the **automated Connect4 Game** using the fabulo
 
 ---
 
+### Movements
+
+**ImageToPickup Movement**
+![Image To Pickup Movement](imageToPickup_Movement.jpg)
+
+**PickCoin Movement**
+![Pick Coin Movement](pickCoin_Movement.jpeg)
+
+**RackToBoard Movement**
+![Rack To Board Movement](rackToBoard_Movement.jpg)
+
+**Drop Coin Movement**
+![Drop Coin Movement](dropCoin_Movement.jpg)
+
+**Picture Movement**
+![Picture Movement](picture_Movement.jpeg)
+
+**WaitForHuman Movement**
+![WaitForHuman Movement](waitForHuman_Movement.jpg)
+
+**WaitForClean Movement**
+![WaitForClean Movement](waitForClean_Movement.jpg)
+
+**Cleanup Movement**
+![Cleanup Movement](cleanUp_Movement.jpg)
+
+
 ### Screenshots of Running Scripts
 
 **analyze_board.py in Action**
@@ -185,6 +212,7 @@ Welcome to the Documentation of the **automated Connect4 Game** using the fabulo
 **cleanup_board.py in Action**
     Screenshot of transforming the `cleanupBoard` into the `cleanUpArray` two times
     ![Cleanup_board.py in Action](cleanup_inAction.png)
+
 
 
 
