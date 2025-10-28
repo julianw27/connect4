@@ -28,7 +28,8 @@ Welcome to the Documentation of the **automated Connect4 Game** using the fabulo
 | Movement | Program | Description |
 |-----------|---------|-------------|
 | **imageToPickupMovement** | `imageToPickup.urp` | Robot moves from the picture Position to the base Position over the rack for the next pickUp (picture Position --> Base Position over Rack) |
-| **pickCoinMovement** | `pickCoin.urp` | Robot receives current `pickUpPosition` as Input and picks up coin at that position (Base Position over Rack --> pickUp --> Base Position over Rack) |
+| **pickCoinMovement** | `pickCoin.urp` | Robot receives current `pickUpPosition` as Input and picks up coin at that position (Base Position over Rack --> pickUp) |
+| **liftCoinMovement** | `liftCoin.urp` | Robot again receives the current `pickUpPosition` as Input and lifts Coin at that Position and gets back to the rack (pickUp --> Base Position over Rack)
 | **rackToBoardMovement** | `rackToBoard.urp` | Robot moves with Coin to the base position over the Board (Base Position over Rack --> Base Position over Board) |
 | **dropCoinMovement** | `dropCoin.urp` | Robot receives `nextColumn` as Input and drops Coin in that column (Base Position over Board --> dropCoin --> Base Position over Board) |
 | **picturePositionMovement** | `picture.urp` | Robot moves from Base Position over Board to the picture Position to take picture of Board (Base Position over Board --> Picture Position) |
@@ -83,45 +84,46 @@ Welcome to the Documentation of the **automated Connect4 Game** using the fabulo
     ![Sending pickUpPosition](send_pickupPos.png)
 
 7. **Pickup Coin:**
-    Pickup the coin at the current `pickUpPosition` and end the movement in the base position over the rack (`pickCoinMovement`)
+    Pickup the coin at the current `pickUpPosition` (`pickCoinMovement`)
+    Lift the coin at the current `pickUpPosition` and end the movement in the base position at the rack (`liftCoinMovement`)
 
-8. **Move to Board:**
+9. **Move to Board:**
     Move with the picked up Coin to the base Position over the board (`rackToBoardMovement`)
 
-9. **Send value of `nextColumn`:**
+10. **Send value of `nextColumn`:**
     Send the value of the `nextColumn` to the robot as input for the `dropCoinMovement`
     ![Sending nextColumn](send_nextColumn.png)
 
-10. **Drop Coin:**
+11. **Drop Coin:**
     Drop the coin at the `nextColumn` and end the movement in the base position over the rack (`dropCoinMovement`)
 
-11. **Move to picture Position:**
+12. **Move to picture Position:**
     Move from the base Position over the rack to the picture Position to take a picture after the recent robot move (`picturePositionMovement`)
 
-12. **Increment `pickUpPosition`:**
+13. **Increment `pickUpPosition`:**
     Increment the `pickupPosition` for the next round in the gameflow
 
-13. **Take Comparison Picture:**
+14. **Take Comparison Picture:**
     Run the `capture_board.py` and store the current board state in the `currentBoard` AND `previousBoard` data object by accessing the result variable in CPEE
     ![Captures board state after placement](capture_boardstate.png)
 
-14. **Check winning robot move:**
+15. **Check winning robot move:**
     Check if robot made a winning move by running the `check_winner.py` with `currentBoard` as Input Argument. 
     Access result variable to store the result in the `winner` data Object
 
-15. **No winner, proceed to wait:**
+16. **No winner, proceed to wait:**
     If robot did not make a winning move, the robot moves from picturePosition to base position over Board to let human make the next move (`waitingPositionMovement`)
 
-16. **Wait for Human:**
+17. **Wait for Human:**
     Wait for 5 seconds to give human time to make its next move
 
-17. **Move to picture Position:**
+18. **Move to picture Position:**
     Move to the picture Position to take comparision picture to see if the human made its move (`picturePositionMovement`)
 
-18. **Take Comparison Picture:**
+19. **Take Comparison Picture:**
     Take picture of the board by running `capture_board.py` and store the current board state in the `currentBoard` Data Object
 
-19. **Check if human made its move:**
+20. **Check if human made its move:**
     Check if the human needs more time (`currentBoard == previousBoard`). If so, move to waiting Position again (`waitingPositionMovement`)
     ![Waiting for the human loop](waitingLoop.png)
 
@@ -212,6 +214,7 @@ Welcome to the Documentation of the **automated Connect4 Game** using the fabulo
 **cleanup_board.py in Action**
     Screenshot of transforming the `cleanupBoard` into the `cleanUpArray` two times
     ![Cleanup_board.py in Action](cleanup_inAction.png)
+
 
 
 
