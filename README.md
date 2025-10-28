@@ -3,6 +3,9 @@
 Welcome to the Documentation of the **automated Connect4 Game** using the fabulous **CPEE**
 
 ---
+## YouTube Video Link
+    https://www.youtube.com/watch?v=gfqbmMbcYWE
+---
 
 ## DATA OBJECTS
 | Variable | Description |
@@ -214,6 +217,7 @@ Welcome to the Documentation of the **automated Connect4 Game** using the fabulo
 **cleanup_board.py in Action**
     Screenshot of transforming the `cleanupBoard` into the `cleanUpArray` two times
     ![Cleanup_board.py in Action](cleanup_inAction.png)
+
 
 
 
